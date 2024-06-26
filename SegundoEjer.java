@@ -16,5 +16,27 @@ public class SegundoEjer {
         + "Mi sexo es " + sexo + "\n"
         + "Soy estudiante: " + esEstudiante + "\n"
         + "Mi telefono es " + telefono);
+
+        //EJERCICIO COMPLEMENTARIO
+
+        //Declara una variable llamada mensajeBienvenida y asigna como valor "Bienvenido a Java".
+        String mensajeBienvenida;
+
+        mensajeBienvenida = "Bienvenido a Java";
+
+        //Declara una variable llamada temperaturaActual y asigna como valor "19".
+        double temperaturaActual;
+
+        temperaturaActual = 19;
+
+        //Declara una variable llamada datoLogico y asigna como valor "true".
+        boolean datoLogico;
+
+        datoLogico = true;
+
+        //Imprimir por consola
+        System.out.println("Mensaje de bienvenida: " + mensajeBienvenida + "\n"
+        + "Temperatura actual: " + temperaturaActual + "\n"
+        + "Dato logico: " + datoLogico);
     }
 }
