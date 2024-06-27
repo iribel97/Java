@@ -1,6 +1,7 @@
 import java.util.Scanner;
 
 public class EjercicioOperMath {
+    
     public static void main(String[] args){
         //Instanciar el Scanner
         Scanner scanner = new Scanner(System.in);
