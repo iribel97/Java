@@ -8,7 +8,7 @@ public class Calculadora {
         Scanner scanner = new Scanner(System.in);
 
         //Variables
-        double num1, num2, resultado;
+        double num1, num2;
         int opcion;
 
         //Pedir al usuario que ingrese dos números
@@ -30,31 +30,11 @@ public class Calculadora {
         System.out.print("Ingrese la opción deseada: ");
         opcion = scanner.nextInt();
 
-        //Switch para realizar la operación seleccionada
-        switch(opcion){
-            case 1:
-                resultado = num1 + num2;
-                System.out.println("El resultado de la suma es: " + resultado);
-                break;
-            case 2:
-                resultado = num1 - num2;
-                System.out.println("El resultado de la resta es: " + resultado);
-                break;
-            case 3:
-                resultado = num1 * num2;
-                System.out.println("El resultado de la multiplicación es: " + resultado);
-                break;
-            case 4:
-                if(num2 == 0){
-                    System.out.println("No se puede dividir por cero");
-                }else{
-                    resultado = num1 / num2;
-                    System.out.println("El resultado de la división es: " + resultado);
-                }
-                break;
-            default:
-                System.out.println("Opción no válida");
-        }
+        System.out.println((opcion == 1) ? ("La suma de los dos números es: " + (num1 + num2)) 
+                            : (opcion == 2) ? ("La resta de los dos números es: " + (num1 - num2)) 
+                            : (opcion == 3) ? ("La multiplicación de los dos números es: " + (num1 * num2)) 
+                            : (opcion == 4) ? ((num2 != 0) ? ("La división de los dos números es: " + (num1 / num2)) : "No se puede dividir por cero")
+                            : "Opción no válida");
 
         //Cerrar el scanner
         scanner.close();
