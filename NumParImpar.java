@@ -23,6 +23,15 @@ public class NumParImpar {
 
         //Cerrar el scanner
         scanner.close();
+
+        /*
+         * En caso de algo con menos código, se puede hacer lo siguiente:
+         * 
+         * Scanner scanner = new Scanner(System.in);
+         * System.out.print("Ingrese un número: ");
+         * int num = scanner.nextInt();
+         * System.out.println("El número " + num + " es " + (num % 2 == 0 ? "par" : "impar"));
+         */
     
     }
 }
