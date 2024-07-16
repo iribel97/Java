@@ -3,11 +3,6 @@ import java.util.Arrays;
 public class CompararArrays {
     
     public static void main(String[] args) {
-        
-        /*
-         * Escribe un programa que compare dos arreglos de enteros utilizando el método Arrays.equals(). 
-         * El programa debe imprimir si los arreglos son iguales o no.
-         */
 
         //Variables
         int[] arrayNum1 = new int[4];
