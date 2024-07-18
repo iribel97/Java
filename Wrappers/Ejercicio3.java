@@ -4,12 +4,6 @@ import java.util.Scanner;
 
 public class Ejercicio3 {
     
-    /*
-     * Pide al usuario que introduzca una cadena. Crea un bucle que recorra cada carácter en la cadena y 
-     * utiliza Character.isLetter() para verificar si todos los caracteres son letras. Muestra un mensaje al 
-     * usuario indicando si la cadena contiene solo letras o no.
-     */
-
     public static void main(String[] args) {
         //Instanciar Scanner
         Scanner scanner = new Scanner(System.in);
