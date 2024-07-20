@@ -7,39 +7,46 @@ public class NumPrimos {
         
         try {
             
-
-            /*
-             * VARIABLES
-             */
-            int numUsu, cont = 0;
+            //VARIABLES
+            int numUsu, cont = 0, temp, contP;
 
             do {
 
-                if (cont > 2) {
-                    System.out.print("El número ingresado no es primo. Ingrese de nuevo un número: ");
-                } else {
-                    System.out.print("Ingrese un número (0 en caso de querer salir): ");
-                }
-                
+                System.out.print("Ingrese la cantidad de números primos a hallar (0 en caso de querer salir): ");
                 numUsu = scanner.nextInt();
-                cont = 0;
+
+                temp = 2;
+                contP = 0;
 
                 if (numUsu != 0) {
                     
-                    for (int i = 1; i <= numUsu; i++) {
-                        if (numUsu % i == 0) {
-                            cont++;
+                    do {
+
+                        cont = 0;
+
+                        for (int i = 1; i <= temp; i++) {
+                            if (temp % i == 0) {
+                                cont++;
+                            } 
                         }
-                    }
-    
-                    if (cont == 2) {
-                        System.out.println("El número " + numUsu + " es primo.");
-                    }
+                        
+                        if (cont == 2) {
+                            System.out.print(temp + " ");
+                            contP++;
+                        }
+
+                        temp++;
+                        
+                    } while (contP < numUsu);
+
+                    System.out.println();
                     
                 }
 
                 
             } while (numUsu != 0);
+
+            scanner.close();
 
         } catch (Exception e) {
             System.out.println("Error: " + e.getMessage());
