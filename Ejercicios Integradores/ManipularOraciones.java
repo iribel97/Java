@@ -4,28 +4,7 @@ import java.util.Scanner;
 public class ManipularOraciones {
 
     public static void main(String[] args) {
-        /*
-         * Muestra un menú de opciones al usuario donde podrá:
-         * 1. Crear oración o Borrar oración: Si la oración está vacía, mostrar el mensaje "Crear oración". 
-         *    Si la oración tiene contenido, mostrar el mensaje "Borrar oración".
-         * 2. Cantidad de caracteres de la oración: Calcular y mostrar la cantidad total de caracteres en la oración 
-         *    (incluyendo espacios).
-         * 3. Cantidad de palabras de la oración: Calcular y mostrar la cantidad de palabras en la oración.
-         * 4. Mostrar palabras ordenadas alfabéticamente: Mostrar las palabras de la oración ordenadas alfabéticamente.
-         * 5. Ingresar un número y devolver la palabra correspondiente: Solicitar al usuario ingresar un número y 
-         *    mostrar la palabra correspondiente a esa posición en la oración. Si se ingresa un número fuera del rango 
-         *    de número de palabras (la primera palabra corresponde al número 1), 
-         *    mostrar el mensaje "Número inválido. Intente nuevamente".
-         * 6. Buscar palabra dentro de la oración: Solicitar al usuario ingresar una palabra y verificar 
-         *    si esa palabra se encuentra en la oración. Mostrar un mensaje indicando si la palabra fue encontrada 
-         *    y la posición en la que se encuentra.
-         * 7. Modificar palabra dentro de la oración: Solicitar al usuario ingresar la palabra que se quiere cambiar, 
-         *    mostrar un mensaje de error si no se encuentra y volver a solicitar la palabra. Si la palabra es correcta, 
-         *    solicitar una nueva palabra (o frase) y reemplazar la anterior. 
-         *    Mostrar la nueva oración modificada (recordar validar que solo contenga letras y espacios).
-         * 8. Agregar contenido a la oración: Solicitar al usuario ingresar contenido y agregar ese contenido al final de la oración.
-         * 9. Salir: Terminar el programa.
-         */
+
         Scanner scan = new Scanner(System.in);
 
         try {
@@ -100,7 +79,7 @@ public class ManipularOraciones {
                         if (oracion.isEmpty()) {
                             System.out.println("La oración está vacía");
                         } else {
-                            System.out.println("Ingrese un número: ");
+                            System.out.print("Ingrese un número: ");
                             int num = scan.nextInt();
                             if (num > 0 && num <= oracion.split(" ").length) {
                                 System.out.println("La palabra correspondiente al número ingresado es: " + oracion.split(" ")[num-1]);
@@ -114,7 +93,7 @@ public class ManipularOraciones {
                         if (oracion.isEmpty()) {
                             System.out.println("La oración está vacía");
                         } else {
-                            System.out.println("Ingrese una palabra: ");
+                            System.out.print("Ingrese una palabra: ");
                             scan.nextLine();
                             String palabra = scan.nextLine();
                             if (oracion.contains(palabra)) {
@@ -129,11 +108,11 @@ public class ManipularOraciones {
                         if (oracion.isEmpty()) {
                             System.out.println("La oración está vacía");
                         } else {
-                            System.out.println("Ingrese la palabra que desea cambiar: ");
+                            System.out.print("Ingrese la palabra que desea cambiar: ");
                             scan.nextLine();
                             String palabraVieja = scan.nextLine();
                             if (oracion.contains(palabraVieja)) {
-                                System.out.println("Ingrese la nueva palabra: ");
+                                System.out.print("Ingrese la nueva palabra: ");
                                 String palabraNueva = scan.nextLine();
                                 oracion = oracion.replace(palabraVieja, palabraNueva);
                                 System.out.println("Oración modificada: " + oracion);
@@ -144,7 +123,7 @@ public class ManipularOraciones {
                         break;
 
                     case 8:
-                        System.out.println("Ingrese contenido para agregar a la oración: ");
+                        System.out.print("Ingrese contenido para agregar a la oración: ");
                         scan.nextLine();
                         String contenido = scan.nextLine();
                         oracion += " " + contenido;
